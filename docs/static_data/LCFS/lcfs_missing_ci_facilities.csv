@@ -1,0 +1,8 @@
+epm,status,ca_facility_id,ownership,plant_name,state,city,latitude,longitude,rail_lines,ethanol_capacity_mgy,dryer_types,technology,high_pro,chp,white_fox,icm_p10,reg_pathway,co2_pipeline_direct,co2_pipeline_3rd_party,co2_sponsor,d6_non_cellulosic,d3_cellulosic
+3576,Active,70109,Bushmills Ethanol Inc.,Bushmills Ethanol Inc,MN,Atwater,45.07333,-94.755556,BNSF,90.0,Rotary Dryer,ICM,,,,,EP3,,SCS,Summit Carbon Solutions,D6,D3
+3584,Active,70095,Central Indiana Ethanol,CIE Norfolk GNS LLC,NE,Norfolk,42.06672,-97.3815,NCRC/WC1s,60.0,Rotary Dryer,ICM,,,,,EP3,,,None,D6,-
+3591,Active,70145,Gold-Eagle Cooperative,Corn LP,IA,Goldfield,42.733339,-93.910902,UP,80.0,Rotary Dryer,ICM,ICM HI PRO,,,,,,SCS,Summit Carbon Solutions,D6,D3
+3598,Active,83483,East Kansas Agri-Energy,East Kansas Agri-Energy LLC,KS,Garnett,38.271522,-95.237414,UP,48.0,Rotary Dryer,ICM,,,,,EP3,,,,D6,D3
+3602,Active,70058,Front Range Energy LLC,Front Range Energy LLC,CO,Windsor,40.45746,-104.856211,UP/BNSF,46.0,Rotary Dryer,ICM,,,White Fox,,,,,None,D6,-
+3608,Active,70691,Golden Grain Energy,Golden Grain Energy LLC,IA,Mason City,43.11204,-93.23104,UP,140.0,Rotary Dryer,ICM,ICM HI PRO,,White Fox ICE,,,,SCS,Summit Carbon Solutions,D6,D3
+3645,Active,70269,United Cooperative,United Energy Necadah,WI,Necedah,43.99187,-90.07219,CN,106.0,Rotary Dryer,ICM,,,,,EP3,,,None,D6,-
