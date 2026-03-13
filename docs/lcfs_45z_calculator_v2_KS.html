@@ -860,6 +860,57 @@ header, main{ position:relative; z-index:1; }
 
 </div>
 
+
+<p class="sectionTitle" style="margin-top:14px;">45Q credit value timeline</p>
+
+<div class="metricGrid">
+
+  <div class="metric">
+  <div class="metricLabel">Estimated Biogenic CO2</div>
+  <div class="valuePill"><span class="value" id="outBiogenicCo2">—</span></div>
+  <div class="metricSub">Capacity × 1,000,000 × 6.29 ÷ 2,204.62</div>
+</div>
+
+  <div class="metric">
+  <div class="metricLabel">45Q credit ($/ton)</div>
+  <div class="valuePill">
+    <input
+      id="fortyfiveqCreditPerTon"
+      type="text"
+      inputmode="decimal"
+      value="$85.00"
+    />
+  </div>
+  <div class="metricSub">User-entered 45Q value</div>
+</div>
+
+  <div class="metric">
+    <div class="metricLabel">45Q annual value ($/yr)</div>
+    <div class="valuePill"><span class="value" id="out45qAnnualValue">—</span></div>
+    <div class="metricSub">Biogenic CO2 × $/ton</div>
+  </div>
+
+ <div class="metric">
+  <div class="metricLabel">45Q remaining years</div>
+  <div class="valuePill"><span class="value" id="out45qRemainingYears">—</span></div>
+  <div class="metricSub">Post-2029 years remaining in 45Q term</div>
+</div>
+
+ <div class="metric">
+  <div class="metricLabel">45Q annual value per gallon</div>
+  <div class="valuePill"><span class="value" id="out45qValuePerGal">—</span></div>
+  <div class="metricSub">Annual value / annual gallons</div>
+</div>
+
+  <div class="metric">
+  <div class="metricLabel">Discounted 45Q value ($)</div>
+  <div class="valuePill"><span class="value" id="out45qDiscountedValue">—</span></div>
+  <div class="metricSub">PV of post-2029 annual 45Q at 10%</div>
+</div>
+
+</div>
+
+
         <!-- Details live below so the top row can stay tight -->
         <div class="note" style="margin-top:8px;">
           <div><span class="mono">Rate detail:</span> <span id="outRateDetailNote">—</span></div>
@@ -1150,49 +1201,7 @@ header, main{ position:relative; z-index:1; }
 
 <div class="hr"></div>
 
-<p class="sectionTitle">CCS credit value timeline</p>
 
-<div class="metricGrid">
-
-  <div class="metric">
-  <div class="metricLabel">Estimated Biogenic CO2</div>
-  <div class="valuePill"><span class="value" id="outBiogenicCo2">—</span></div>
-  <div class="metricSub">Capacity × 1,000,000 × 6.29 ÷ 2,204.62</div>
-</div>
-
-  <div class="metric">
-    <div class="metricLabel">45Q credit ($/ton)</div>
-    <div class="valuePill">
-      <input id="fortyfiveqCreditPerTon" type="number" step="1" value="85" />
-    </div>
-    <div class="metricSub">User-entered 45Q value</div>
-  </div>
-
-  <div class="metric">
-    <div class="metricLabel">45Q annual value ($/yr)</div>
-    <div class="valuePill"><span class="value" id="out45qAnnualValue">—</span></div>
-    <div class="metricSub">Biogenic CO2 × $/ton</div>
-  </div>
-
- <div class="metric">
-  <div class="metricLabel">45Q remaining years</div>
-  <div class="valuePill"><span class="value" id="out45qRemainingYears">—</span></div>
-  <div class="metricSub">Post-2029 years remaining in 45Q term</div>
-</div>
-
-  <div class="metric">
-    <div class="metricLabel">Total 45Q remaining value ($)</div>
-    <div class="valuePill"><span class="value" id="out45qTotalValue">—</span></div>
-    <div class="metricSub">Annual 45Q × post-45Z years</div>
-  </div>
-
-  <div class="metric">
-    <div class="metricLabel">Program note</div>
-    <div class="valuePill"><span class="value" id="outProgramNote">—</span></div>
-    <div class="metricSub">45Z first, then 45Q</div>
-  </div>
-
-</div>
 
 
 
@@ -1253,12 +1262,12 @@ header, main{ position:relative; z-index:1; }
   // ----------------------------
   const DATA_URL = "./static_data/LCFS/lcfs_dropdown_v2_KS.json";
   console.log("✅ RUNNING CALC FILE:", window.location.href);
-  console.log("✅ BUILD_STAMP:", "2026-03-12 12:22:27");
+  console.log("✅ BUILD_STAMP:", "2026-03-13 12:30:42");
   console.log("✅ DATA_URL:", DATA_URL);
 
   console.log("DATA_URL:", DATA_URL);
 
-  console.log("BUILD_STAMP:", "2026-03-12 12:22:27");
+  console.log("BUILD_STAMP:", "2026-03-13 12:30:42");
 
   // CA hubs (UP + BNSF)
   const CA_HUBS = [
@@ -1405,6 +1414,7 @@ const LB_PER_METRIC_TON = 2204.62;
 const FORTYFIVEQ_TERM_YEARS = 12;
 const FORTYFIVEZ_LAST_YEAR = 2029;
 const CURRENT_MODEL_YEAR = new Date().getFullYear();
+const FORTYFIVEQ_DISCOUNT_RATE = 0.10;
 
 
 
@@ -1749,11 +1759,26 @@ function firstNonEmpty(...vals){
     : `${niceName}${tail ? " ("+tail+")" : ""}`;
 }
 
-  function getNumber(id){
-    const el = document.getElementById(id);
-    const n = Number(el ? el.value : NaN);
-    return Number.isFinite(n) ? n : NaN;
-  }
+ function getNumber(id){
+  const el = document.getElementById(id);
+  if (!el) return NaN;
+
+  const raw = String(el.value ?? "").replace(/[$,%\s,]/g, "");
+  const n = Number(raw);
+  return Number.isFinite(n) ? n : NaN;
+}
+
+function formatCurrencyInput(id, decimals=2){
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  const raw = String(el.value ?? "").replace(/[$,\s]/g, "");
+  const n = Number(raw);
+
+  if (!Number.isFinite(n)) return;
+  el.value = `$${n.toFixed(decimals)}`;
+} 
+
   function getChecked(id){
     const el = document.getElementById(id);
     return !!(el && el.checked);
@@ -2166,7 +2191,8 @@ function compute(){
   fortyfiveq_credit_per_ton: NaN,
   fortyfiveq_annual_value: NaN,
   fortyfiveq_remaining_years: NaN,
-  fortyfiveq_total_value: NaN,
+  fortyfiveq_value_per_gal: NaN,
+  fortyfiveq_discounted_value: NaN,
 
   // Final adjusted CI in LCFS units
   ci45z_g_per_mj: NaN,
@@ -2252,8 +2278,34 @@ res.fortyfiveq_remaining_years = ch2Apply
   ? remaining45QYearsAfter45Z(res.ccs_in_service_date)
   : 0;
 
-if (Number.isFinite(res.fortyfiveq_annual_value) && Number.isFinite(res.fortyfiveq_remaining_years)){
-  res.fortyfiveq_total_value = res.fortyfiveq_annual_value * res.fortyfiveq_remaining_years;
+if (Number.isFinite(res.fortyfiveq_annual_value) && Number.isFinite(gallonsPerYear) && gallonsPerYear > 0){
+  res.fortyfiveq_value_per_gal = res.fortyfiveq_annual_value / gallonsPerYear;
+} else {
+  res.fortyfiveq_value_per_gal = NaN;
+}
+
+// Discounted 45Q value:
+// - no 45Q collection through 2029
+// - first eligible 45Q year is 2030
+// - discount annual 45Q value back to CURRENT_MODEL_YEAR at 10%
+if (ch2Apply && Number.isFinite(res.fortyfiveq_annual_value) && res.fortyfiveq_annual_value > 0){
+  const inServiceYear = yearFromIsoDate(res.ccs_in_service_date);
+  if (inServiceYear){
+    const endYear = inServiceYear + FORTYFIVEQ_TERM_YEARS - 1;
+    const firstEligibleYear = Math.max(FORTYFIVEZ_LAST_YEAR + 1, CURRENT_MODEL_YEAR + 1);
+
+    let pv = 0;
+    for (let y = firstEligibleYear; y <= endYear; y++){
+      const t = y - CURRENT_MODEL_YEAR;
+      pv += res.fortyfiveq_annual_value / Math.pow(1 + FORTYFIVEQ_DISCOUNT_RATE, t);
+    }
+
+    res.fortyfiveq_discounted_value = pv;
+  } else {
+    res.fortyfiveq_discounted_value = NaN;
+  }
+} else {
+  res.fortyfiveq_discounted_value = NaN;
 }
 
 
@@ -2376,8 +2428,8 @@ function renderOutputs(){
   const outBiogenicCo2 = document.getElementById("outBiogenicCo2");
   const out45qAnnualValue    = document.getElementById("out45qAnnualValue");
   const out45qRemainingYears = document.getElementById("out45qRemainingYears");
-  const out45qTotalValue     = document.getElementById("out45qTotalValue");
-  const outProgramNote       = document.getElementById("outProgramNote");
+  const out45qValuePerGal    = document.getElementById("out45qValuePerGal");
+  const out45qDiscountedValue = document.getElementById("out45qDiscountedValue");
 
   const benchEq = document.getElementById("benchGmjEq");
   if (benchEq){
@@ -2415,8 +2467,8 @@ function renderOutputs(){
     if (outBiogenicCo2) outBiogenicCo2.textContent = "—";
     if (out45qAnnualValue) out45qAnnualValue.textContent = "—";
     if (out45qRemainingYears) out45qRemainingYears.textContent = "—";
-    if (out45qTotalValue) out45qTotalValue.textContent = "—";
-    if (outProgramNote) outProgramNote.textContent = "—";
+    if (out45qValuePerGal) out45qValuePerGal.textContent = "—";
+    if (out45qDiscountedValue) out45qDiscountedValue.textContent = "—";
 
     if (outRateDetail) outRateDetail.textContent = "—";
     if (outRateDetailNote) outRateDetailNote.textContent = "—";
@@ -2461,20 +2513,21 @@ function renderOutputs(){
       : "—";
   }
 
-  if (out45qTotalValue){
-    out45qTotalValue.textContent = Number.isFinite(r.fortyfiveq_total_value)
-      ? r.fortyfiveq_total_value.toLocaleString(undefined, {
+ if (out45qValuePerGal){
+  out45qValuePerGal.textContent = Number.isFinite(r.fortyfiveq_value_per_gal)
+    ? `$${fmt(r.fortyfiveq_value_per_gal, 4)}`
+    : "—";
+}
+  }
+
+    if (out45qDiscountedValue){
+    out45qDiscountedValue.textContent = Number.isFinite(r.fortyfiveq_discounted_value)
+      ? r.fortyfiveq_discounted_value.toLocaleString(undefined, {
           style: "currency",
           currency: "USD",
           maximumFractionDigits: 0
         })
       : "—";
-  }
-
-  if (outProgramNote){
-    outProgramNote.textContent = getChecked("ch2_pipeline_apply")
-      ? "45Z first, then 45Q"
-      : "CCS off";
   }
 
   out45zCi.textContent = Number.isFinite(r.emissions_kg_per_mmbtu)
@@ -2652,6 +2705,10 @@ function wireEvents(){
       renderOutputs();
     });
   }
+
+
+
+
 
   // OPTIONAL: wire click buttons (▲/▼)
   const up = document.getElementById("miscUp");
