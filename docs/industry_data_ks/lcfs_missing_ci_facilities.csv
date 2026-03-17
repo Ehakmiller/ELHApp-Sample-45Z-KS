@@ -93,6 +93,7 @@ epm,status,ca_facility_id,ownership,plant_name,state,city,latitude,longitude,rai
 3760,Startup,,New Energy Blue,New Energy Blue,IA,,,,IATR/up,18555.714,,,,,,,,,,,,
 3761,Startup,,Sumitomo Corporation of Americas,Sumitomo Corporation of Americas,,,,,,,,,,,,,,,,,,
 3762,Active,,AE Innovation,AE Innovation,MN,Luverne,43.6474487685906,-96.2248918435399,MSR/BNSF,,,Unknown,,,,,,,,None,,
+None,,,,,,,,,,,,,,,,,,,S,,,
 SD-02,Active,,Attis Industries Inc.,Attis Industries Inc.,NY,Fulton,43.3,-76.381,CSX,,,Unknown,,,,,,,,None,,
 SD-07,Active,,Red River Energy,Red River Energy,ND,Grand Forks,47.9439737609467,-97.0851760097759,BNSF,,,Unknown,,,,,,,,None,,
 SD-08,Active,,Tyton NC Biofuels,Tyton NC Biofuels,NC,Raeford,34.946728,-79.144518,CSX/NS,,,Katzen,,,,,,,,None,,
