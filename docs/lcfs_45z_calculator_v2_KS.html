@@ -780,7 +780,25 @@ header, main{ position:relative; z-index:1; }
   }
 }  
   
-  
+.licenseFooter{
+  margin-top:24px;
+  padding:14px 0 6px 0;
+  border-top:1px solid var(--line);
+  font-size:12px;
+  color:var(--text);
+  text-align:center;
+  line-height:1.5;
+  position:relative;
+  z-index:2;
+}
+
+.licenseFooter a{
+  color:var(--text);
+  text-decoration:underline;
+  pointer-events:auto;
+}
+
+ 
 </style>
 </head>
 
@@ -1334,6 +1352,14 @@ The credit applies to qualifying carbon capture projects located in the United S
 </div>  <!-- closes RIGHT .card -->
 
 </div>  <!-- closes .grid -->
+
+<div class="licenseFooter">
+  © 2026 E. Hakmiller. Non-commercial use only.
+  <a href="../LICENSE" target="_blank" rel="noopener noreferrer">See LICENSE</a>
+</div>
+
+
+
 </main>
 
 <script>
@@ -1342,12 +1368,12 @@ The credit applies to qualifying carbon capture projects located in the United S
   // ----------------------------
   const DATA_URL = "./industry_data_ks/lcfs_dropdown_v2_KS.json";
   console.log("✅ RUNNING CALC FILE:", window.location.href);
-  console.log("✅ BUILD_STAMP:", "2026-03-17 12:15:07");
+  console.log("✅ BUILD_STAMP:", "2026-03-17 12:43:08");
   console.log("✅ DATA_URL:", DATA_URL);
   
   console.log("DATA_URL:", DATA_URL);
   
-  console.log("BUILD_STAMP:", "2026-03-17 12:15:07");
+  console.log("BUILD_STAMP:", "2026-03-17 12:43:08");
 
   // CA hubs (UP + BNSF)
   const CA_HUBS = [
