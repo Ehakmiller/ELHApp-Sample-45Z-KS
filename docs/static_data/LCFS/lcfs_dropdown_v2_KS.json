@@ -11,11 +11,11 @@
     "ethanol_capacity_mgy": 50.0,
     "d6_non_cellulosic": null,
     "d3_cellulosic": null,
-    "ci_lcfs_delivered_g_per_mj": 63.9,
-    "ci_date": "2026-02-11",
+    "ci_lcfs_delivered_g_per_mj": null,
+    "ci_date": null,
     "ci_by_feedstock": {
-      "ci_corn_g_per_mj": 63.9,
-      "ci_fiber_g_per_mj": 25.15,
+      "ci_corn_g_per_mj": null,
+      "ci_fiber_g_per_mj": null,
       "ci_sorghum_g_per_mj": null,
       "ci_wheat_g_per_mj": null,
       "ci_sugar_g_per_mj": null
@@ -32,14 +32,14 @@
     "electricity_type": null,
     "fiber_technology": null,
     "dryer_used": null,
-    "dryer_confidence": "low",
+    "dryer_confidence": null,
     "dryer_conflict": false,
     "dryer_tokens": [],
     "co2_pipeline_direct": null,
     "co2_pipeline_3rd_party": null,
     "co2_sponsor": null,
-    "source_table": "US_Ethanol_CI_ByFeedstock",
-    "desc_raw": ""
+    "source_table": null,
+    "desc_raw": "nan"
   },
   {
     "facility_id": "70247",
@@ -437,8 +437,8 @@
   },
   {
     "facility_id": "70302",
-    "ownership": "Purefield",
-    "plant_name": "Purefield Ingridents LLC",
+    "ownership": "SVPGlobal",
+    "plant_name": "Purefield Ingredients LLC",
     "state": "KS",
     "city": "Russell",
     "latitude": 38.90005,
@@ -550,11 +550,11 @@
     "ethanol_capacity_mgy": 20.0,
     "d6_non_cellulosic": null,
     "d3_cellulosic": null,
-    "ci_lcfs_delivered_g_per_mj": 63.9,
-    "ci_date": "2026-02-11",
+    "ci_lcfs_delivered_g_per_mj": null,
+    "ci_date": null,
     "ci_by_feedstock": {
-      "ci_corn_g_per_mj": 63.9,
-      "ci_fiber_g_per_mj": 25.15,
+      "ci_corn_g_per_mj": null,
+      "ci_fiber_g_per_mj": null,
       "ci_sorghum_g_per_mj": null,
       "ci_wheat_g_per_mj": null,
       "ci_sugar_g_per_mj": null
@@ -571,14 +571,14 @@
     "electricity_type": null,
     "fiber_technology": null,
     "dryer_used": null,
-    "dryer_confidence": "low",
+    "dryer_confidence": null,
     "dryer_conflict": false,
     "dryer_tokens": [],
     "co2_pipeline_direct": null,
     "co2_pipeline_3rd_party": null,
     "co2_sponsor": "None",
-    "source_table": "US_Ethanol_CI_ByFeedstock",
-    "desc_raw": ""
+    "source_table": null,
+    "desc_raw": "nan"
   },
   {
     "facility_id": "70030",
