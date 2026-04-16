@@ -1370,12 +1370,12 @@ The credit applies to qualifying carbon capture projects located in the United S
   
   const DATA_URL = "./static_data/LCFS/lcfs_dropdown_v2_ks.json";
   console.log("✅ RUNNING CALC FILE:", window.location.href);
-  console.log("✅ BUILD_STAMP:", "2026-04-15 19:24:52");
+  console.log("✅ BUILD_STAMP:", "2026-04-15 20:47:01");
   console.log("✅ DATA_URL:", DATA_URL);
   
   console.log("DATA_URL:", DATA_URL);
   
-  console.log("BUILD_STAMP:", "2026-04-15 19:24:52");
+  console.log("BUILD_STAMP:", "2026-04-15 20:47:01");
 
   // CA hubs (UP + BNSF)
   const CA_HUBS = [
@@ -2666,14 +2666,20 @@ const items = [
   ],
   ["Gas supply", selectedPlant.gas_supply],
   ["Technology", selectedPlant.technology],
-  ["Total BTU per Gal (2023)",
-    (() => {
-      const v = selectedPlant?.thermal_btu_per_gal_est;
-      return (v === null || v === undefined || v === "")
-        ? "—"
-        : Number(v).toLocaleString("en-US", { maximumFractionDigits: 0 });
-    })()
-  ],
+ ["Total BTU per Gal (2023)",
+  (() => {
+    const v = selectedPlant?.thermal_btu_per_gal_est;
+
+    if (v === null || v === undefined || v === "") return "—";
+
+    const num = Number(v);
+    if (!Number.isFinite(num)) return "—";
+
+    if (num < 12000) return "Likely Partial Year";
+
+    return num.toLocaleString("en-US", { maximumFractionDigits: 0 });
+  })()
+],
 
   
 
