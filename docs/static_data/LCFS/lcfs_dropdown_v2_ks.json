@@ -1,6 +1,7 @@
 [
   {
     "fac_info": {
+      "epm": "3556",
       "facility_id": null,
       "plant_name": "Amber Wave",
       "ownership": "Summit Sustainable Ingredients",
@@ -26,6 +27,11 @@
         "ci_wheat_g_per_mj": null,
         "ci_sugar_g_per_mj": null
       }
+    },
+    "co2_info": {
+      "co2_pipeline_direct": null,
+      "co2_pipeline_3rd_party": null,
+      "co2_sponsor": null
     },
     "lcfs_detail": {
       "ca_detail": [],
@@ -58,6 +64,10 @@
       "technology": "Wheat",
       "reg_pathway": null,
       "gas_supply": null,
+      "primary_process_fuel": "Natural Gas",
+      "boiler_fuel": null,
+      "dryer_fuel": null,
+      "thermal_oxidizer_fuel": null,
       "electricity_type": null,
       "electrical_grid_designation": null,
       "fiber_technology": null,
@@ -66,18 +76,87 @@
       "dryer_conflict": false,
       "dryer_tokens": []
     },
-    "co2_info": {
-      "co2_pipeline_direct": null,
-      "co2_pipeline_3rd_party": null,
-      "co2_sponsor": null
+    "epa_ghg": {
+      "facility_name": "Summit Sustainable Ingredients DBA Amber Wave",
+      "subparts": "C",
+      "sectors": "Other",
+      "total_direct_emissions_mtco2e": 53315.8,
+      "co2_non_biogenic_mt": 53261.0,
+      "ch4_mtco2e": 25.0,
+      "n2o_mtco2e": 29.8,
+      "biogenic_co2_mt": null,
+      "stationary_combustion_mtco2e": 53315.8,
+      "electricity_generation_mtco2e": null,
+      "co2_collected_onsite_flag": "N",
+      "co2_transferred_offsite_flag": "N",
+      "cem_flag": "N"
+    },
+    "epa_ghg_derived": {
+      "gas_supply_effective": "Natural Gas",
+      "gas_supply_effective_source": "override",
+      "thermal_calc_applied": true,
+      "thermal_calc_method": "explicit_natural_gas",
+      "thermal_source_basis": "stationary_combustion_mtco2e",
+      "thermal_mmbtu_est": 1004820.9574067093,
+      "thermal_btu_per_gal_est": 20096.419148134188,
+      "co2_kg_per_gal_est": 1.06522,
+      "co2_lb_per_gal_est": 2.3484053164,
+      "dryer_profile_bucket": "mixed",
+      "has_electricity_generation": null,
+      "has_onsite_co2_collection": false,
+      "has_offsite_co2_transfer": false,
+      "uses_cem": false
+    },
+    "fuel_summary": {
+      "fuel_type_master": "Natural Gas",
+      "is_natural_gas_user": true,
+      "fuel_conflict": false,
+      "fuel_conflict_values": [],
+      "fuel_source_first_hit": "override",
+      "fuel_source_first_path": "tech_flags.primary_process_fuel",
+      "fuel_source_first_value": "Natural Gas",
+      "fuel_source_first_date": null,
+      "fuel_evidence_count": 2,
+      "fuel_evidence": [
+        {
+          "source": "override",
+          "path": "tech_flags.primary_process_fuel",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        },
+        {
+          "source": "epa_ghg_derived",
+          "path": "epa_ghg_derived.gas_supply_effective",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        }
+      ]
     },
     "meta": {
+      "record_built_at": "2026-04-15 19:16:53",
       "source_table": null,
-      "desc_raw": "nan"
+      "desc_raw": "nan",
+      "primary_join_key": "epm",
+      "primary_join_value": "3556",
+      "facility_join_key": "ca_facility_id",
+      "facility_join_value": null,
+      "record_sources": {
+        "fac_info": "corn_processors",
+        "rin_info": "RIN_pathways",
+        "ci_summary": "US_Ethanol_CI_ByFeedstock",
+        "lcfs_detail_ca": "LCFS_Detail",
+        "lcfs_detail_or": "OR_LCFS_Detail",
+        "epa_ghg": "EPA_Greenhouse_Gas_Reporting",
+        "fuel_summary": "derived_from_tech_flags_lcfs_detail_epa_ghg_derived",
+        "dryer_analysis": "derived_from_ca_detail"
+      }
     }
   },
   {
     "fac_info": {
+      "epm": "3564",
       "facility_id": "70247",
       "plant_name": "Arkalon Ethanol LLC",
       "ownership": "Conestoga Energy",
@@ -95,7 +174,7 @@
     },
     "ci_summary": {
       "ci_lcfs_delivered_g_per_mj": 64.5,
-      "ci_date": "2026-02-11",
+      "ci_date": "2026-03-26",
       "ci_by_feedstock": {
         "ci_corn_g_per_mj": 64.5,
         "ci_fiber_g_per_mj": 24.39,
@@ -103,6 +182,11 @@
         "ci_wheat_g_per_mj": null,
         "ci_sugar_g_per_mj": null
       }
+    },
+    "co2_info": {
+      "co2_pipeline_direct": null,
+      "co2_pipeline_3rd_party": null,
+      "co2_sponsor": null
     },
     "lcfs_detail": {
       "ca_detail": [
@@ -112,7 +196,7 @@
           "feedstock": "Corn Fiber (012)",
           "coproduct_type": null,
           "ci_score": 24.39,
-          "fiber_technology": "EDENIQ",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -123,7 +207,7 @@
           "feedstock": "Corn (009)",
           "coproduct_type": "DDGS",
           "ci_score": 73.9,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -134,7 +218,7 @@
           "feedstock": "Corn (009)",
           "coproduct_type": "WDGS",
           "ci_score": 64.5,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -145,7 +229,7 @@
           "feedstock": "Grain Sorghum (010)",
           "coproduct_type": "DDGS",
           "ci_score": 77.17,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -156,10 +240,65 @@
           "feedstock": "Grain Sorghum (010)",
           "coproduct_type": "WDGS",
           "ci_score": 67.77,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Fiber",
+          "feedstock": "Corn Fiber (012)",
+          "coproduct_type": null,
+          "ci_score": 24.39,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Corn (009)",
+          "coproduct_type": "DDGS",
+          "ci_score": 73.9,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Corn (009)",
+          "coproduct_type": "WDGS",
+          "ci_score": 64.5,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Grain Sorghum (010)",
+          "coproduct_type": "DDGS",
+          "ci_score": 77.17,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Grain Sorghum (010)",
+          "coproduct_type": "WDGS",
+          "ci_score": 67.77,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
         }
       ],
       "or_detail": [
@@ -250,26 +389,204 @@
       "technology": "ICM",
       "reg_pathway": null,
       "gas_supply": "Natural Gas",
+      "primary_process_fuel": null,
+      "boiler_fuel": null,
+      "dryer_fuel": null,
+      "thermal_oxidizer_fuel": null,
       "electricity_type": "Grid Electricity",
       "electrical_grid_designation": "SPP",
-      "fiber_technology": "",
+      "fiber_technology": null,
       "dryer_used": null,
       "dryer_confidence": "low",
       "dryer_conflict": false,
       "dryer_tokens": []
     },
-    "co2_info": {
-      "co2_pipeline_direct": null,
-      "co2_pipeline_3rd_party": null,
-      "co2_sponsor": null
+    "epa_ghg": {
+      "facility_name": "ARKALON ETHANOL LLC",
+      "subparts": "C,PP",
+      "sectors": "Other,Suppliers of CO2",
+      "total_direct_emissions_mtco2e": 104536.156,
+      "co2_non_biogenic_mt": 104428.2,
+      "ch4_mtco2e": 49.25,
+      "n2o_mtco2e": 58.706,
+      "biogenic_co2_mt": null,
+      "stationary_combustion_mtco2e": 104536.156,
+      "electricity_generation_mtco2e": null,
+      "co2_collected_onsite_flag": "N",
+      "co2_transferred_offsite_flag": "N",
+      "cem_flag": "N"
+    },
+    "epa_ghg_derived": {
+      "gas_supply_effective": "Natural Gas",
+      "gas_supply_effective_source": "lcfs_detail",
+      "thermal_calc_applied": true,
+      "thermal_calc_method": "explicit_natural_gas",
+      "thermal_source_basis": "stationary_combustion_mtco2e",
+      "thermal_mmbtu_est": 1970149.9434602335,
+      "thermal_btu_per_gal_est": 16282.23093768788,
+      "co2_kg_per_gal_est": 0.8630429752066116,
+      "co2_lb_per_gal_est": 1.9026818039999998,
+      "dryer_profile_bucket": "wet_heavy_or_very_efficient",
+      "has_electricity_generation": null,
+      "has_onsite_co2_collection": false,
+      "has_offsite_co2_transfer": false,
+      "uses_cem": false
+    },
+    "fuel_summary": {
+      "fuel_type_master": "Natural Gas",
+      "is_natural_gas_user": true,
+      "fuel_conflict": false,
+      "fuel_conflict_values": [],
+      "fuel_source_first_hit": "corn_processors",
+      "fuel_source_first_path": "tech_flags.gas_supply",
+      "fuel_source_first_value": "Natural Gas",
+      "fuel_source_first_date": null,
+      "fuel_evidence_count": 17,
+      "fuel_evidence": [
+        {
+          "source": "corn_processors",
+          "path": "tech_flags.gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[0].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[1].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[2].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[3].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[4].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[5].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[6].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[7].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[8].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[9].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_or",
+          "path": "lcfs_detail.or_detail[0].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2025-07-10"
+        },
+        {
+          "source": "lcfs_detail_or",
+          "path": "lcfs_detail.or_detail[1].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2025-07-10"
+        },
+        {
+          "source": "lcfs_detail_or",
+          "path": "lcfs_detail.or_detail[2].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2025-07-10"
+        },
+        {
+          "source": "lcfs_detail_or",
+          "path": "lcfs_detail.or_detail[3].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2025-07-10"
+        },
+        {
+          "source": "lcfs_detail_or",
+          "path": "lcfs_detail.or_detail[4].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2025-07-10"
+        },
+        {
+          "source": "epa_ghg_derived",
+          "path": "epa_ghg_derived.gas_supply_effective",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        }
+      ]
     },
     "meta": {
+      "record_built_at": "2026-04-15 19:16:53",
       "source_table": "US_Ethanol_CI_ByFeedstock",
-      "desc_raw": ""
+      "desc_raw": "",
+      "primary_join_key": "epm",
+      "primary_join_value": "3564",
+      "facility_join_key": "ca_facility_id",
+      "facility_join_value": "70247",
+      "record_sources": {
+        "fac_info": "corn_processors",
+        "rin_info": "RIN_pathways",
+        "ci_summary": "US_Ethanol_CI_ByFeedstock",
+        "lcfs_detail_ca": "LCFS_Detail",
+        "lcfs_detail_or": "OR_LCFS_Detail",
+        "epa_ghg": "EPA_Greenhouse_Gas_Reporting",
+        "fuel_summary": "derived_from_tech_flags_lcfs_detail_epa_ghg_derived",
+        "dryer_analysis": "derived_from_ca_detail"
+      }
     }
   },
   {
     "fac_info": {
+      "epm": "3574",
       "facility_id": "70117",
       "plant_name": "Bonanza Bioenergy LLC",
       "ownership": "Conestoga Energy",
@@ -287,7 +604,7 @@
     },
     "ci_summary": {
       "ci_lcfs_delivered_g_per_mj": 64.45,
-      "ci_date": "2026-02-11",
+      "ci_date": "2026-03-26",
       "ci_by_feedstock": {
         "ci_corn_g_per_mj": 64.45,
         "ci_fiber_g_per_mj": 24.44,
@@ -295,6 +612,11 @@
         "ci_wheat_g_per_mj": null,
         "ci_sugar_g_per_mj": null
       }
+    },
+    "co2_info": {
+      "co2_pipeline_direct": "Direct",
+      "co2_pipeline_3rd_party": null,
+      "co2_sponsor": "Direct Inject"
     },
     "lcfs_detail": {
       "ca_detail": [
@@ -304,7 +626,7 @@
           "feedstock": "Corn Fiber (012)",
           "coproduct_type": null,
           "ci_score": 24.44,
-          "fiber_technology": "EDENIQ",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -315,7 +637,7 @@
           "feedstock": "Corn (009)",
           "coproduct_type": "WDGS",
           "ci_score": 64.45,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -326,10 +648,43 @@
           "feedstock": "Grain Sorghum (010)",
           "coproduct_type": "WDGS",
           "ci_score": 67.03,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Fiber",
+          "feedstock": "Corn Fiber (012)",
+          "coproduct_type": null,
+          "ci_score": 24.44,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Corn (009)",
+          "coproduct_type": "WDGS",
+          "ci_score": 64.45,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Grain Sorghum (010)",
+          "coproduct_type": "WDGS",
+          "ci_score": 67.03,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
         }
       ],
       "or_detail": [
@@ -395,26 +750,162 @@
       "technology": "ICM",
       "reg_pathway": null,
       "gas_supply": "Natural Gas",
+      "primary_process_fuel": null,
+      "boiler_fuel": null,
+      "dryer_fuel": null,
+      "thermal_oxidizer_fuel": null,
       "electricity_type": "Grid Electricity",
       "electrical_grid_designation": "SPP",
-      "fiber_technology": "EDENIQ",
+      "fiber_technology": null,
       "dryer_used": null,
       "dryer_confidence": "low",
       "dryer_conflict": false,
       "dryer_tokens": []
     },
-    "co2_info": {
-      "co2_pipeline_direct": "Direct",
-      "co2_pipeline_3rd_party": null,
-      "co2_sponsor": "Direct Inject"
+    "epa_ghg": {
+      "facility_name": "BONANZA BIOENERGY, LLC",
+      "subparts": "C,PP",
+      "sectors": "Other,Suppliers of CO2",
+      "total_direct_emissions_mtco2e": 56157.288,
+      "co2_non_biogenic_mt": 56099.2,
+      "ch4_mtco2e": 26.5,
+      "n2o_mtco2e": 31.588,
+      "biogenic_co2_mt": null,
+      "stationary_combustion_mtco2e": 56157.288,
+      "electricity_generation_mtco2e": null,
+      "co2_collected_onsite_flag": "N",
+      "co2_transferred_offsite_flag": "N",
+      "cem_flag": "N"
+    },
+    "epa_ghg_derived": {
+      "gas_supply_effective": "Natural Gas",
+      "gas_supply_effective_source": "lcfs_detail",
+      "thermal_calc_applied": true,
+      "thermal_calc_method": "explicit_natural_gas",
+      "thermal_source_basis": "stationary_combustion_mtco2e",
+      "thermal_mmbtu_est": 1058373.3132303052,
+      "thermal_btu_per_gal_est": 14399.636914698029,
+      "co2_kg_per_gal_est": 0.7632544217687075,
+      "co2_lb_per_gal_est": 1.6826859633197278,
+      "dryer_profile_bucket": "wet_heavy_or_very_efficient",
+      "has_electricity_generation": null,
+      "has_onsite_co2_collection": false,
+      "has_offsite_co2_transfer": false,
+      "uses_cem": false
+    },
+    "fuel_summary": {
+      "fuel_type_master": "Natural Gas",
+      "is_natural_gas_user": true,
+      "fuel_conflict": false,
+      "fuel_conflict_values": [],
+      "fuel_source_first_hit": "corn_processors",
+      "fuel_source_first_path": "tech_flags.gas_supply",
+      "fuel_source_first_value": "Natural Gas",
+      "fuel_source_first_date": null,
+      "fuel_evidence_count": 11,
+      "fuel_evidence": [
+        {
+          "source": "corn_processors",
+          "path": "tech_flags.gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[0].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[1].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[2].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[3].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[4].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[5].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_or",
+          "path": "lcfs_detail.or_detail[0].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2025-07-10"
+        },
+        {
+          "source": "lcfs_detail_or",
+          "path": "lcfs_detail.or_detail[1].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2025-07-10"
+        },
+        {
+          "source": "lcfs_detail_or",
+          "path": "lcfs_detail.or_detail[2].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2025-07-10"
+        },
+        {
+          "source": "epa_ghg_derived",
+          "path": "epa_ghg_derived.gas_supply_effective",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        }
+      ]
     },
     "meta": {
+      "record_built_at": "2026-04-15 19:16:53",
       "source_table": "US_Ethanol_CI_ByFeedstock",
-      "desc_raw": ""
+      "desc_raw": "",
+      "primary_join_key": "epm",
+      "primary_join_value": "3574",
+      "facility_join_key": "ca_facility_id",
+      "facility_join_value": "70117",
+      "record_sources": {
+        "fac_info": "corn_processors",
+        "rin_info": "RIN_pathways",
+        "ci_summary": "US_Ethanol_CI_ByFeedstock",
+        "lcfs_detail_ca": "LCFS_Detail",
+        "lcfs_detail_or": "OR_LCFS_Detail",
+        "epa_ghg": "EPA_Greenhouse_Gas_Reporting",
+        "fuel_summary": "derived_from_tech_flags_lcfs_detail_epa_ghg_derived",
+        "dryer_analysis": "derived_from_ca_detail"
+      }
     }
   },
   {
     "fac_info": {
+      "epm": "3598",
       "facility_id": "83483",
       "plant_name": "East Kansas Agri-Energy LLC",
       "ownership": "East Kansas Agri-Energy",
@@ -440,6 +931,11 @@
         "ci_wheat_g_per_mj": null,
         "ci_sugar_g_per_mj": null
       }
+    },
+    "co2_info": {
+      "co2_pipeline_direct": null,
+      "co2_pipeline_3rd_party": null,
+      "co2_sponsor": null
     },
     "lcfs_detail": {
       "ca_detail": [],
@@ -472,6 +968,10 @@
       "technology": "ICM",
       "reg_pathway": "EP3",
       "gas_supply": null,
+      "primary_process_fuel": "Natural Gas",
+      "boiler_fuel": null,
+      "dryer_fuel": null,
+      "thermal_oxidizer_fuel": null,
       "electricity_type": null,
       "electrical_grid_designation": null,
       "fiber_technology": null,
@@ -480,18 +980,87 @@
       "dryer_conflict": false,
       "dryer_tokens": []
     },
-    "co2_info": {
-      "co2_pipeline_direct": null,
-      "co2_pipeline_3rd_party": null,
-      "co2_sponsor": null
+    "epa_ghg": {
+      "facility_name": "EAST KANSAS AGRI-ENERGY",
+      "subparts": "C",
+      "sectors": "Other",
+      "total_direct_emissions_mtco2e": 50316.76,
+      "co2_non_biogenic_mt": 50264.7,
+      "ch4_mtco2e": 23.75,
+      "n2o_mtco2e": 28.31,
+      "biogenic_co2_mt": null,
+      "stationary_combustion_mtco2e": 50316.76,
+      "electricity_generation_mtco2e": null,
+      "co2_collected_onsite_flag": "N",
+      "co2_transferred_offsite_flag": "N",
+      "cem_flag": "N"
+    },
+    "epa_ghg_derived": {
+      "gas_supply_effective": "Natural Gas",
+      "gas_supply_effective_source": "override",
+      "thermal_calc_applied": true,
+      "thermal_calc_method": "explicit_natural_gas",
+      "thermal_source_basis": "stationary_combustion_mtco2e",
+      "thermal_mmbtu_est": 948299.2838296267,
+      "thermal_btu_per_gal_est": 19756.235079783888,
+      "co2_kg_per_gal_est": 1.04718125,
+      "co2_lb_per_gal_est": 2.3086367273749997,
+      "dryer_profile_bucket": "mixed",
+      "has_electricity_generation": null,
+      "has_onsite_co2_collection": false,
+      "has_offsite_co2_transfer": false,
+      "uses_cem": false
+    },
+    "fuel_summary": {
+      "fuel_type_master": "Natural Gas",
+      "is_natural_gas_user": true,
+      "fuel_conflict": false,
+      "fuel_conflict_values": [],
+      "fuel_source_first_hit": "override",
+      "fuel_source_first_path": "tech_flags.primary_process_fuel",
+      "fuel_source_first_value": "Natural Gas",
+      "fuel_source_first_date": null,
+      "fuel_evidence_count": 2,
+      "fuel_evidence": [
+        {
+          "source": "override",
+          "path": "tech_flags.primary_process_fuel",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        },
+        {
+          "source": "epa_ghg_derived",
+          "path": "epa_ghg_derived.gas_supply_effective",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        }
+      ]
     },
     "meta": {
+      "record_built_at": "2026-04-15 19:16:53",
       "source_table": null,
-      "desc_raw": "nan"
+      "desc_raw": "nan",
+      "primary_join_key": "epm",
+      "primary_join_value": "3598",
+      "facility_join_key": "ca_facility_id",
+      "facility_join_value": "83483",
+      "record_sources": {
+        "fac_info": "corn_processors",
+        "rin_info": "RIN_pathways",
+        "ci_summary": "US_Ethanol_CI_ByFeedstock",
+        "lcfs_detail_ca": "LCFS_Detail",
+        "lcfs_detail_or": "OR_LCFS_Detail",
+        "epa_ghg": "EPA_Greenhouse_Gas_Reporting",
+        "fuel_summary": "derived_from_tech_flags_lcfs_detail_epa_ghg_derived",
+        "dryer_analysis": "derived_from_ca_detail"
+      }
     }
   },
   {
     "fac_info": {
+      "epm": "3639",
       "facility_id": "70279",
       "plant_name": "Kansas Ethanol LLC",
       "ownership": "Kansas Ethanol",
@@ -509,7 +1078,7 @@
     },
     "ci_summary": {
       "ci_lcfs_delivered_g_per_mj": 60.29,
-      "ci_date": "2026-02-11",
+      "ci_date": "2026-03-26",
       "ci_by_feedstock": {
         "ci_corn_g_per_mj": 60.29,
         "ci_fiber_g_per_mj": 21.93,
@@ -517,6 +1086,11 @@
         "ci_wheat_g_per_mj": null,
         "ci_sugar_g_per_mj": null
       }
+    },
+    "co2_info": {
+      "co2_pipeline_direct": null,
+      "co2_pipeline_3rd_party": null,
+      "co2_sponsor": null
     },
     "lcfs_detail": {
       "ca_detail": [
@@ -526,7 +1100,7 @@
           "feedstock": "Corn Fiber (012)",
           "coproduct_type": null,
           "ci_score": 21.93,
-          "fiber_technology": "EDENIQ",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -537,7 +1111,7 @@
           "feedstock": "Corn (009)",
           "coproduct_type": "DDGS",
           "ci_score": 68.27,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -548,7 +1122,7 @@
           "feedstock": "Corn (009)",
           "coproduct_type": "WDGS",
           "ci_score": 60.29,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -559,7 +1133,7 @@
           "feedstock": "Grain Sorghum (010)",
           "coproduct_type": "DDGS",
           "ci_score": 70.49,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -570,10 +1144,65 @@
           "feedstock": "Grain Sorghum (010)",
           "coproduct_type": "WDGS",
           "ci_score": 62.52,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Fiber",
+          "feedstock": "Corn Fiber (012)",
+          "coproduct_type": null,
+          "ci_score": 21.93,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Corn (009)",
+          "coproduct_type": "DDGS",
+          "ci_score": 68.27,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Corn (009)",
+          "coproduct_type": "WDGS",
+          "ci_score": 60.29,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Grain Sorghum (010)",
+          "coproduct_type": "DDGS",
+          "ci_score": 70.49,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Grain Sorghum (010)",
+          "coproduct_type": "WDGS",
+          "ci_score": 62.52,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
         }
       ],
       "or_detail": []
@@ -608,26 +1237,169 @@
       "technology": "ICM",
       "reg_pathway": "EP3",
       "gas_supply": "Natural Gas",
+      "primary_process_fuel": null,
+      "boiler_fuel": null,
+      "dryer_fuel": null,
+      "thermal_oxidizer_fuel": null,
       "electricity_type": "Grid Electricity",
       "electrical_grid_designation": "SPP",
-      "fiber_technology": "EDENIQ",
+      "fiber_technology": null,
       "dryer_used": null,
       "dryer_confidence": "low",
       "dryer_conflict": false,
       "dryer_tokens": []
     },
-    "co2_info": {
-      "co2_pipeline_direct": null,
-      "co2_pipeline_3rd_party": null,
-      "co2_sponsor": null
+    "epa_ghg": {
+      "facility_name": "KANSAS ETHANOL LLC",
+      "subparts": "C,II,PP",
+      "sectors": "Other,Suppliers of CO2,Waste",
+      "total_direct_emissions_mtco2e": 111342.628,
+      "co2_non_biogenic_mt": 111200.5,
+      "ch4_mtco2e": 79.25,
+      "n2o_mtco2e": 62.878,
+      "biogenic_co2_mt": 109.1,
+      "stationary_combustion_mtco2e": 111316.128,
+      "electricity_generation_mtco2e": null,
+      "co2_collected_onsite_flag": "N",
+      "co2_transferred_offsite_flag": "N",
+      "cem_flag": "N"
+    },
+    "epa_ghg_derived": {
+      "gas_supply_effective": "Natural Gas",
+      "gas_supply_effective_source": "lcfs_detail",
+      "thermal_calc_applied": true,
+      "thermal_calc_method": "explicit_natural_gas",
+      "thermal_source_basis": "stationary_combustion_mtco2e",
+      "thermal_mmbtu_est": 2097929.2875989443,
+      "thermal_btu_per_gal_est": 26224.116094986803,
+      "co2_kg_per_gal_est": 1.39000625,
+      "co2_lb_per_gal_est": 3.064435578875,
+      "dryer_profile_bucket": "ddgs_heavy",
+      "has_electricity_generation": null,
+      "has_onsite_co2_collection": false,
+      "has_offsite_co2_transfer": false,
+      "uses_cem": false
+    },
+    "fuel_summary": {
+      "fuel_type_master": "Natural Gas",
+      "is_natural_gas_user": true,
+      "fuel_conflict": false,
+      "fuel_conflict_values": [],
+      "fuel_source_first_hit": "corn_processors",
+      "fuel_source_first_path": "tech_flags.gas_supply",
+      "fuel_source_first_value": "Natural Gas",
+      "fuel_source_first_date": null,
+      "fuel_evidence_count": 12,
+      "fuel_evidence": [
+        {
+          "source": "corn_processors",
+          "path": "tech_flags.gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[0].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[1].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[2].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[3].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[4].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[5].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[6].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[7].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[8].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[9].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "epa_ghg_derived",
+          "path": "epa_ghg_derived.gas_supply_effective",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        }
+      ]
     },
     "meta": {
+      "record_built_at": "2026-04-15 19:16:53",
       "source_table": "US_Ethanol_CI_ByFeedstock",
-      "desc_raw": ""
+      "desc_raw": "",
+      "primary_join_key": "epm",
+      "primary_join_value": "3639",
+      "facility_join_key": "ca_facility_id",
+      "facility_join_value": "70279",
+      "record_sources": {
+        "fac_info": "corn_processors",
+        "rin_info": "RIN_pathways",
+        "ci_summary": "US_Ethanol_CI_ByFeedstock",
+        "lcfs_detail_ca": "LCFS_Detail",
+        "lcfs_detail_or": "OR_LCFS_Detail",
+        "epa_ghg": "EPA_Greenhouse_Gas_Reporting",
+        "fuel_summary": "derived_from_tech_flags_lcfs_detail_epa_ghg_derived",
+        "dryer_analysis": "derived_from_ca_detail"
+      }
     }
   },
   {
     "fac_info": {
+      "epm": "3694",
       "facility_id": "70158",
       "plant_name": "Pratt Energy LLC",
       "ownership": "Pratt Energy (Scoular / Pratt JV)",
@@ -645,7 +1417,7 @@
     },
     "ci_summary": {
       "ci_lcfs_delivered_g_per_mj": 62.0,
-      "ci_date": "2026-02-11",
+      "ci_date": "2026-03-26",
       "ci_by_feedstock": {
         "ci_corn_g_per_mj": 62.0,
         "ci_fiber_g_per_mj": 23.25,
@@ -653,6 +1425,11 @@
         "ci_wheat_g_per_mj": null,
         "ci_sugar_g_per_mj": null
       }
+    },
+    "co2_info": {
+      "co2_pipeline_direct": "Direct",
+      "co2_pipeline_3rd_party": null,
+      "co2_sponsor": "Direct Inject"
     },
     "lcfs_detail": {
       "ca_detail": [
@@ -662,7 +1439,7 @@
           "feedstock": "Corn Fiber (012)",
           "coproduct_type": null,
           "ci_score": 23.25,
-          "fiber_technology": "EDENIQ",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -673,7 +1450,7 @@
           "feedstock": "Corn (009)",
           "coproduct_type": "DDGS",
           "ci_score": 75.09,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -684,7 +1461,7 @@
           "feedstock": "Corn (009)",
           "coproduct_type": "WDGS",
           "ci_score": 62.0,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -695,7 +1472,7 @@
           "feedstock": "Grain Sorghum (010)",
           "coproduct_type": "DDGS",
           "ci_score": 77.81,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -706,10 +1483,65 @@
           "feedstock": "Grain Sorghum (010)",
           "coproduct_type": "WDGS",
           "ci_score": 64.72,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Fiber",
+          "feedstock": "Corn Fiber (012)",
+          "coproduct_type": null,
+          "ci_score": 23.25,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Corn (009)",
+          "coproduct_type": "DDGS",
+          "ci_score": 75.09,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Corn (009)",
+          "coproduct_type": "WDGS",
+          "ci_score": 62.0,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Grain Sorghum (010)",
+          "coproduct_type": "DDGS",
+          "ci_score": 77.81,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Grain Sorghum (010)",
+          "coproduct_type": "WDGS",
+          "ci_score": 64.72,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
         }
       ],
       "or_detail": []
@@ -744,26 +1576,169 @@
       "technology": "Lurgi",
       "reg_pathway": null,
       "gas_supply": "Natural Gas",
+      "primary_process_fuel": null,
+      "boiler_fuel": null,
+      "dryer_fuel": null,
+      "thermal_oxidizer_fuel": null,
       "electricity_type": "Grid Electricity",
       "electrical_grid_designation": "SPP",
-      "fiber_technology": "EDENIQ",
+      "fiber_technology": null,
       "dryer_used": null,
       "dryer_confidence": "low",
       "dryer_conflict": false,
       "dryer_tokens": []
     },
-    "co2_info": {
-      "co2_pipeline_direct": "Direct",
-      "co2_pipeline_3rd_party": null,
-      "co2_sponsor": "Direct Inject"
+    "epa_ghg": {
+      "facility_name": "Pratt Energy LLC",
+      "subparts": "C",
+      "sectors": "Other",
+      "total_direct_emissions_mtco2e": 65351.604,
+      "co2_non_biogenic_mt": 65284.2,
+      "ch4_mtco2e": 30.75,
+      "n2o_mtco2e": 36.654,
+      "biogenic_co2_mt": null,
+      "stationary_combustion_mtco2e": 65351.604,
+      "electricity_generation_mtco2e": null,
+      "co2_collected_onsite_flag": "N",
+      "co2_transferred_offsite_flag": "N",
+      "cem_flag": "N"
+    },
+    "epa_ghg_derived": {
+      "gas_supply_effective": "Natural Gas",
+      "gas_supply_effective_source": "lcfs_detail",
+      "thermal_calc_applied": true,
+      "thermal_calc_method": "explicit_natural_gas",
+      "thermal_source_basis": "stationary_combustion_mtco2e",
+      "thermal_mmbtu_est": 1231654.8058801356,
+      "thermal_btu_per_gal_est": 22393.723743275194,
+      "co2_kg_per_gal_est": 1.1869854545454546,
+      "co2_lb_per_gal_est": 2.6168518728,
+      "dryer_profile_bucket": "mixed",
+      "has_electricity_generation": null,
+      "has_onsite_co2_collection": false,
+      "has_offsite_co2_transfer": false,
+      "uses_cem": false
+    },
+    "fuel_summary": {
+      "fuel_type_master": "Natural Gas",
+      "is_natural_gas_user": true,
+      "fuel_conflict": false,
+      "fuel_conflict_values": [],
+      "fuel_source_first_hit": "corn_processors",
+      "fuel_source_first_path": "tech_flags.gas_supply",
+      "fuel_source_first_value": "Natural Gas",
+      "fuel_source_first_date": null,
+      "fuel_evidence_count": 12,
+      "fuel_evidence": [
+        {
+          "source": "corn_processors",
+          "path": "tech_flags.gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[0].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[1].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[2].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[3].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[4].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[5].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[6].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[7].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[8].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[9].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "epa_ghg_derived",
+          "path": "epa_ghg_derived.gas_supply_effective",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        }
+      ]
     },
     "meta": {
+      "record_built_at": "2026-04-15 19:16:53",
       "source_table": "US_Ethanol_CI_ByFeedstock",
-      "desc_raw": ""
+      "desc_raw": "",
+      "primary_join_key": "epm",
+      "primary_join_value": "3694",
+      "facility_join_key": "ca_facility_id",
+      "facility_join_value": "70158",
+      "record_sources": {
+        "fac_info": "corn_processors",
+        "rin_info": "RIN_pathways",
+        "ci_summary": "US_Ethanol_CI_ByFeedstock",
+        "lcfs_detail_ca": "LCFS_Detail",
+        "lcfs_detail_or": "OR_LCFS_Detail",
+        "epa_ghg": "EPA_Greenhouse_Gas_Reporting",
+        "fuel_summary": "derived_from_tech_flags_lcfs_detail_epa_ghg_derived",
+        "dryer_analysis": "derived_from_ca_detail"
+      }
     }
   },
   {
     "fac_info": {
+      "epm": "3695",
       "facility_id": "70302",
       "plant_name": "Purefield Ingredients LLC",
       "ownership": "Purefield",
@@ -781,7 +1756,7 @@
     },
     "ci_summary": {
       "ci_lcfs_delivered_g_per_mj": 67.05,
-      "ci_date": "2026-02-11",
+      "ci_date": "2026-03-26",
       "ci_by_feedstock": {
         "ci_corn_g_per_mj": 67.05,
         "ci_fiber_g_per_mj": null,
@@ -789,6 +1764,11 @@
         "ci_wheat_g_per_mj": 50.57,
         "ci_sugar_g_per_mj": null
       }
+    },
+    "co2_info": {
+      "co2_pipeline_direct": "Direct",
+      "co2_pipeline_3rd_party": null,
+      "co2_sponsor": "Direct Inject"
     },
     "lcfs_detail": {
       "ca_detail": [
@@ -857,6 +1837,72 @@
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Corn (009)",
+          "coproduct_type": "DDGS",
+          "ci_score": 80.13,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Corn (009)",
+          "coproduct_type": "WDGS",
+          "ci_score": 67.05,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Grain Sorghum (010)",
+          "coproduct_type": "DDGS",
+          "ci_score": 82.13,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Grain Sorghum (010)",
+          "coproduct_type": "WDGS",
+          "ci_score": 69.6,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Wheat Starch Slurry (014)",
+          "coproduct_type": "DDGS",
+          "ci_score": 56.85,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Wheat Starch Slurry (014)",
+          "coproduct_type": "WDGS",
+          "ci_score": 50.57,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
         }
       ],
       "or_detail": []
@@ -892,6 +1938,10 @@
       "technology": "Wheat",
       "reg_pathway": null,
       "gas_supply": "Natural Gas",
+      "primary_process_fuel": null,
+      "boiler_fuel": null,
+      "dryer_fuel": null,
+      "thermal_oxidizer_fuel": null,
       "electricity_type": "Grid Electricity",
       "electrical_grid_designation": "SPP",
       "fiber_technology": null,
@@ -900,21 +1950,174 @@
       "dryer_conflict": false,
       "dryer_tokens": []
     },
-    "co2_info": {
-      "co2_pipeline_direct": "Direct",
-      "co2_pipeline_3rd_party": null,
-      "co2_sponsor": "Direct Inject"
+    "epa_ghg": {
+      "facility_name": "PureField Ingredients LLC",
+      "subparts": "C,II",
+      "sectors": "Other,Waste",
+      "total_direct_emissions_mtco2e": 54136.098,
+      "co2_non_biogenic_mt": 53673.0,
+      "ch4_mtco2e": 433.0,
+      "n2o_mtco2e": 30.098,
+      "biogenic_co2_mt": null,
+      "stationary_combustion_mtco2e": 53728.348,
+      "electricity_generation_mtco2e": null,
+      "co2_collected_onsite_flag": "N",
+      "co2_transferred_offsite_flag": "N",
+      "cem_flag": "N"
+    },
+    "epa_ghg_derived": {
+      "gas_supply_effective": "Natural Gas",
+      "gas_supply_effective_source": "lcfs_detail",
+      "thermal_calc_applied": true,
+      "thermal_calc_method": "explicit_natural_gas",
+      "thermal_source_basis": "stationary_combustion_mtco2e",
+      "thermal_mmbtu_est": 1012596.0799095363,
+      "thermal_btu_per_gal_est": 18410.837816537023,
+      "co2_kg_per_gal_est": 0.9758727272727272,
+      "co2_lb_per_gal_est": 2.1514285319999997,
+      "dryer_profile_bucket": "mixed",
+      "has_electricity_generation": null,
+      "has_onsite_co2_collection": false,
+      "has_offsite_co2_transfer": false,
+      "uses_cem": false
+    },
+    "fuel_summary": {
+      "fuel_type_master": "Natural Gas",
+      "is_natural_gas_user": true,
+      "fuel_conflict": false,
+      "fuel_conflict_values": [],
+      "fuel_source_first_hit": "corn_processors",
+      "fuel_source_first_path": "tech_flags.gas_supply",
+      "fuel_source_first_value": "Natural Gas",
+      "fuel_source_first_date": null,
+      "fuel_evidence_count": 14,
+      "fuel_evidence": [
+        {
+          "source": "corn_processors",
+          "path": "tech_flags.gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[0].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[1].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[2].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[3].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[4].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[5].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[6].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[7].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[8].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[9].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[10].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[11].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "epa_ghg_derived",
+          "path": "epa_ghg_derived.gas_supply_effective",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        }
+      ]
     },
     "meta": {
+      "record_built_at": "2026-04-15 19:16:53",
       "source_table": "US_Ethanol_CI_ByFeedstock",
-      "desc_raw": ""
+      "desc_raw": "",
+      "primary_join_key": "epm",
+      "primary_join_value": "3695",
+      "facility_join_key": "ca_facility_id",
+      "facility_join_value": "70302",
+      "record_sources": {
+        "fac_info": "corn_processors",
+        "rin_info": "RIN_pathways",
+        "ci_summary": "US_Ethanol_CI_ByFeedstock",
+        "lcfs_detail_ca": "LCFS_Detail",
+        "lcfs_detail_or": "OR_LCFS_Detail",
+        "epa_ghg": "EPA_Greenhouse_Gas_Reporting",
+        "fuel_summary": "derived_from_tech_flags_lcfs_detail_epa_ghg_derived",
+        "dryer_analysis": "derived_from_ca_detail"
+      }
     }
   },
   {
     "fac_info": {
+      "epm": "3701",
       "facility_id": null,
       "plant_name": "Reeve Agri Energy Inc",
-      "ownership": "Reeve Agri\u2013Energy",
+      "ownership": "Reeve Agri-Energy",
       "state": "KS",
       "city": "Garden City",
       "latitude": 37.881418,
@@ -937,6 +2140,11 @@
         "ci_wheat_g_per_mj": null,
         "ci_sugar_g_per_mj": null
       }
+    },
+    "co2_info": {
+      "co2_pipeline_direct": null,
+      "co2_pipeline_3rd_party": null,
+      "co2_sponsor": null
     },
     "lcfs_detail": {
       "ca_detail": [],
@@ -969,6 +2177,10 @@
       "technology": "Katzen",
       "reg_pathway": null,
       "gas_supply": null,
+      "primary_process_fuel": "Natural Gas",
+      "boiler_fuel": null,
+      "dryer_fuel": null,
+      "thermal_oxidizer_fuel": null,
       "electricity_type": null,
       "electrical_grid_designation": null,
       "fiber_technology": null,
@@ -977,18 +2189,87 @@
       "dryer_conflict": false,
       "dryer_tokens": []
     },
-    "co2_info": {
-      "co2_pipeline_direct": null,
-      "co2_pipeline_3rd_party": null,
-      "co2_sponsor": null
+    "epa_ghg": {
+      "facility_name": "BONANZA BIOENERGY, LLC",
+      "subparts": "C,PP",
+      "sectors": "Other,Suppliers of CO2",
+      "total_direct_emissions_mtco2e": 56157.288,
+      "co2_non_biogenic_mt": 56099.2,
+      "ch4_mtco2e": 26.5,
+      "n2o_mtco2e": 31.588,
+      "biogenic_co2_mt": null,
+      "stationary_combustion_mtco2e": 56157.288,
+      "electricity_generation_mtco2e": null,
+      "co2_collected_onsite_flag": "N",
+      "co2_transferred_offsite_flag": "N",
+      "cem_flag": "N"
+    },
+    "epa_ghg_derived": {
+      "gas_supply_effective": "Natural Gas",
+      "gas_supply_effective_source": "override",
+      "thermal_calc_applied": true,
+      "thermal_calc_method": "explicit_natural_gas",
+      "thermal_source_basis": "stationary_combustion_mtco2e",
+      "thermal_mmbtu_est": 1058373.3132303052,
+      "thermal_btu_per_gal_est": 52918.66566151526,
+      "co2_kg_per_gal_est": 2.80496,
+      "co2_lb_per_gal_est": 6.183870915199999,
+      "dryer_profile_bucket": "ddgs_heavy",
+      "has_electricity_generation": null,
+      "has_onsite_co2_collection": false,
+      "has_offsite_co2_transfer": false,
+      "uses_cem": false
+    },
+    "fuel_summary": {
+      "fuel_type_master": "Natural Gas",
+      "is_natural_gas_user": true,
+      "fuel_conflict": false,
+      "fuel_conflict_values": [],
+      "fuel_source_first_hit": "override",
+      "fuel_source_first_path": "tech_flags.primary_process_fuel",
+      "fuel_source_first_value": "Natural Gas",
+      "fuel_source_first_date": null,
+      "fuel_evidence_count": 2,
+      "fuel_evidence": [
+        {
+          "source": "override",
+          "path": "tech_flags.primary_process_fuel",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        },
+        {
+          "source": "epa_ghg_derived",
+          "path": "epa_ghg_derived.gas_supply_effective",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        }
+      ]
     },
     "meta": {
+      "record_built_at": "2026-04-15 19:16:53",
       "source_table": null,
-      "desc_raw": "nan"
+      "desc_raw": "nan",
+      "primary_join_key": "epm",
+      "primary_join_value": "3701",
+      "facility_join_key": "ca_facility_id",
+      "facility_join_value": null,
+      "record_sources": {
+        "fac_info": "corn_processors",
+        "rin_info": "RIN_pathways",
+        "ci_summary": "US_Ethanol_CI_ByFeedstock",
+        "lcfs_detail_ca": "LCFS_Detail",
+        "lcfs_detail_or": "OR_LCFS_Detail",
+        "epa_ghg": "EPA_Greenhouse_Gas_Reporting",
+        "fuel_summary": "derived_from_tech_flags_lcfs_detail_epa_ghg_derived",
+        "dryer_analysis": "derived_from_ca_detail"
+      }
     }
   },
   {
     "fac_info": {
+      "epm": "3736",
       "facility_id": "70030",
       "plant_name": "Western Plains Energy LLC",
       "ownership": "Western Plains Energy",
@@ -1006,7 +2287,7 @@
     },
     "ci_summary": {
       "ci_lcfs_delivered_g_per_mj": 64.89,
-      "ci_date": "2026-02-11",
+      "ci_date": "2026-03-26",
       "ci_by_feedstock": {
         "ci_corn_g_per_mj": 64.89,
         "ci_fiber_g_per_mj": 24.36,
@@ -1014,6 +2295,11 @@
         "ci_wheat_g_per_mj": null,
         "ci_sugar_g_per_mj": null
       }
+    },
+    "co2_info": {
+      "co2_pipeline_direct": null,
+      "co2_pipeline_3rd_party": null,
+      "co2_sponsor": null
     },
     "lcfs_detail": {
       "ca_detail": [
@@ -1023,7 +2309,7 @@
           "feedstock": "Corn Fiber (012)",
           "coproduct_type": null,
           "ci_score": 24.36,
-          "fiber_technology": "EDENIQ",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
@@ -1034,9 +2320,9 @@
           "feedstock": "Corn (009)",
           "coproduct_type": "WDGS",
           "ci_score": 64.89,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
-          "electricity_type": "Grid & Zero-CI Electricity",
+          "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
         },
         {
@@ -1045,10 +2331,43 @@
           "feedstock": "Grain Sorghum (010)",
           "coproduct_type": "WDGS",
           "ci_score": 65.94,
-          "fiber_technology": "",
+          "fiber_technology": null,
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Fiber",
+          "feedstock": "Corn Fiber (012)",
+          "coproduct_type": null,
+          "ci_score": 24.36,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Corn (009)",
+          "coproduct_type": "WDGS",
+          "ci_score": 64.89,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Grain Sorghum (010)",
+          "coproduct_type": "WDGS",
+          "ci_score": 65.94,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
         }
       ],
       "or_detail": [
@@ -1103,26 +2422,141 @@
       "technology": "ICM",
       "reg_pathway": null,
       "gas_supply": "Natural Gas",
+      "primary_process_fuel": null,
+      "boiler_fuel": null,
+      "dryer_fuel": null,
+      "thermal_oxidizer_fuel": null,
       "electricity_type": "Grid Electricity",
       "electrical_grid_designation": "SPP",
-      "fiber_technology": "EDENIQ",
+      "fiber_technology": null,
       "dryer_used": null,
       "dryer_confidence": "low",
       "dryer_conflict": false,
       "dryer_tokens": []
     },
-    "co2_info": {
-      "co2_pipeline_direct": null,
-      "co2_pipeline_3rd_party": null,
-      "co2_sponsor": null
+    "epa_ghg": {
+      "facility_name": "WESTERN PLAINS ENERGY LLC",
+      "subparts": "C",
+      "sectors": "Other",
+      "total_direct_emissions_mtco2e": 39373.152,
+      "co2_non_biogenic_mt": 39332.6,
+      "ch4_mtco2e": 18.5,
+      "n2o_mtco2e": 22.052,
+      "biogenic_co2_mt": null,
+      "stationary_combustion_mtco2e": 39373.152,
+      "electricity_generation_mtco2e": null,
+      "co2_collected_onsite_flag": "N",
+      "co2_transferred_offsite_flag": "N",
+      "cem_flag": "N"
+    },
+    "epa_ghg_derived": {
+      "gas_supply_effective": "Natural Gas",
+      "gas_supply_effective_source": "lcfs_detail",
+      "thermal_calc_applied": true,
+      "thermal_calc_method": "explicit_natural_gas",
+      "thermal_source_basis": "stationary_combustion_mtco2e",
+      "thermal_mmbtu_est": 742049.6042216358,
+      "thermal_btu_per_gal_est": 14270.18469656992,
+      "co2_kg_per_gal_est": 0.7563961538461539,
+      "co2_lb_per_gal_est": 1.6675660886923076,
+      "dryer_profile_bucket": "wet_heavy_or_very_efficient",
+      "has_electricity_generation": null,
+      "has_onsite_co2_collection": false,
+      "has_offsite_co2_transfer": false,
+      "uses_cem": false
+    },
+    "fuel_summary": {
+      "fuel_type_master": "Natural Gas",
+      "is_natural_gas_user": true,
+      "fuel_conflict": false,
+      "fuel_conflict_values": [],
+      "fuel_source_first_hit": "corn_processors",
+      "fuel_source_first_path": "tech_flags.gas_supply",
+      "fuel_source_first_value": "Natural Gas",
+      "fuel_source_first_date": null,
+      "fuel_evidence_count": 8,
+      "fuel_evidence": [
+        {
+          "source": "corn_processors",
+          "path": "tech_flags.gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[0].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[1].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[2].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[3].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[4].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[5].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "epa_ghg_derived",
+          "path": "epa_ghg_derived.gas_supply_effective",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        }
+      ]
     },
     "meta": {
+      "record_built_at": "2026-04-15 19:16:53",
       "source_table": "US_Ethanol_CI_ByFeedstock",
-      "desc_raw": ""
+      "desc_raw": "",
+      "primary_join_key": "epm",
+      "primary_join_value": "3736",
+      "facility_join_key": "ca_facility_id",
+      "facility_join_value": "70030",
+      "record_sources": {
+        "fac_info": "corn_processors",
+        "rin_info": "RIN_pathways",
+        "ci_summary": "US_Ethanol_CI_ByFeedstock",
+        "lcfs_detail_ca": "LCFS_Detail",
+        "lcfs_detail_or": "OR_LCFS_Detail",
+        "epa_ghg": "EPA_Greenhouse_Gas_Reporting",
+        "fuel_summary": "derived_from_tech_flags_lcfs_detail_epa_ghg_derived",
+        "dryer_analysis": "derived_from_ca_detail"
+      }
     }
   },
   {
     "fac_info": {
+      "epm": "3756",
       "facility_id": "75441",
       "plant_name": "Cardinal",
       "ownership": "Cardinal Ethanol",
@@ -1140,7 +2574,7 @@
     },
     "ci_summary": {
       "ci_lcfs_delivered_g_per_mj": 65.55,
-      "ci_date": "2026-02-11",
+      "ci_date": "2026-03-26",
       "ci_by_feedstock": {
         "ci_corn_g_per_mj": 65.55,
         "ci_fiber_g_per_mj": null,
@@ -1148,6 +2582,11 @@
         "ci_wheat_g_per_mj": null,
         "ci_sugar_g_per_mj": null
       }
+    },
+    "co2_info": {
+      "co2_pipeline_direct": null,
+      "co2_pipeline_3rd_party": null,
+      "co2_sponsor": null
     },
     "lcfs_detail": {
       "ca_detail": [
@@ -1172,6 +2611,28 @@
           "gas_supply": "Natural Gas",
           "electricity_type": "Grid Electricity",
           "detail_date": "2026-02-11"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Corn (009)",
+          "coproduct_type": "DDGS",
+          "ci_score": 75.95,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
+        },
+        {
+          "program": "CA",
+          "pathway_type": "Starch",
+          "feedstock": "Corn (009)",
+          "coproduct_type": "WDGS",
+          "ci_score": 65.55,
+          "fiber_technology": null,
+          "gas_supply": "Natural Gas",
+          "electricity_type": "Grid Electricity",
+          "detail_date": "2026-03-26"
         }
       ],
       "or_detail": []
@@ -1205,6 +2666,10 @@
       "technology": "ICM",
       "reg_pathway": "EP3",
       "gas_supply": "Natural Gas",
+      "primary_process_fuel": null,
+      "boiler_fuel": null,
+      "dryer_fuel": null,
+      "thermal_oxidizer_fuel": null,
       "electricity_type": "Grid Electricity",
       "electrical_grid_designation": "SPP",
       "fiber_technology": null,
@@ -1213,14 +2678,110 @@
       "dryer_conflict": false,
       "dryer_tokens": []
     },
-    "co2_info": {
-      "co2_pipeline_direct": null,
-      "co2_pipeline_3rd_party": null,
-      "co2_sponsor": null
+    "epa_ghg": {
+      "facility_name": "ELEMENT, LLC",
+      "subparts": "C",
+      "sectors": "Other",
+      "total_direct_emissions_mtco2e": 19119.428,
+      "co2_non_biogenic_mt": 19099.7,
+      "ch4_mtco2e": 9.0,
+      "n2o_mtco2e": 10.728,
+      "biogenic_co2_mt": null,
+      "stationary_combustion_mtco2e": 19119.428,
+      "electricity_generation_mtco2e": null,
+      "co2_collected_onsite_flag": "N",
+      "co2_transferred_offsite_flag": "N",
+      "cem_flag": "N"
+    },
+    "epa_ghg_derived": {
+      "gas_supply_effective": "Natural Gas",
+      "gas_supply_effective_source": "lcfs_detail",
+      "thermal_calc_applied": true,
+      "thermal_calc_method": "explicit_natural_gas",
+      "thermal_source_basis": "stationary_combustion_mtco2e",
+      "thermal_mmbtu_est": 360335.9969845458,
+      "thermal_btu_per_gal_est": 5147.657099779225,
+      "co2_kg_per_gal_est": 0.2728528571428571,
+      "co2_lb_per_gal_est": 0.6015368659142856,
+      "dryer_profile_bucket": "wet_heavy_or_very_efficient",
+      "has_electricity_generation": null,
+      "has_onsite_co2_collection": false,
+      "has_offsite_co2_transfer": false,
+      "uses_cem": false
+    },
+    "fuel_summary": {
+      "fuel_type_master": "Natural Gas",
+      "is_natural_gas_user": true,
+      "fuel_conflict": false,
+      "fuel_conflict_values": [],
+      "fuel_source_first_hit": "corn_processors",
+      "fuel_source_first_path": "tech_flags.gas_supply",
+      "fuel_source_first_value": "Natural Gas",
+      "fuel_source_first_date": null,
+      "fuel_evidence_count": 6,
+      "fuel_evidence": [
+        {
+          "source": "corn_processors",
+          "path": "tech_flags.gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[0].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[1].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-02-11"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[2].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "lcfs_detail_ca",
+          "path": "lcfs_detail.ca_detail[3].gas_supply",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": "2026-03-26"
+        },
+        {
+          "source": "epa_ghg_derived",
+          "path": "epa_ghg_derived.gas_supply_effective",
+          "value": "Natural Gas",
+          "raw_value": "Natural Gas",
+          "date": null
+        }
+      ]
     },
     "meta": {
+      "record_built_at": "2026-04-15 19:16:53",
       "source_table": "US_Ethanol_CI_ByFeedstock",
-      "desc_raw": ""
+      "desc_raw": "",
+      "primary_join_key": "epm",
+      "primary_join_value": "3756",
+      "facility_join_key": "ca_facility_id",
+      "facility_join_value": "75441",
+      "record_sources": {
+        "fac_info": "corn_processors",
+        "rin_info": "RIN_pathways",
+        "ci_summary": "US_Ethanol_CI_ByFeedstock",
+        "lcfs_detail_ca": "LCFS_Detail",
+        "lcfs_detail_or": "OR_LCFS_Detail",
+        "epa_ghg": "EPA_Greenhouse_Gas_Reporting",
+        "fuel_summary": "derived_from_tech_flags_lcfs_detail_epa_ghg_derived",
+        "dryer_analysis": "derived_from_ca_detail"
+      }
     }
   }
 ]
