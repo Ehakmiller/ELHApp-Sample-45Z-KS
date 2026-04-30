@@ -61,16 +61,17 @@
       "special_tech": null,
       "wind_turbine": null,
       "waste_heat": null,
+      "dco_enhancement": null,
       "dryer_types": null,
-      "technology": "Unknown",
+      "technology": "ICM",
       "reg_pathway": null,
       "gas_supply": null,
       "primary_process_fuel": "Natural Gas",
       "boiler_fuel": null,
       "dryer_fuel": null,
       "thermal_oxidizer_fuel": null,
-      "electricity_type": null,
-      "electrical_grid_designation": null,
+      "electricity_type": "Grid Electricity",
+      "electrical_grid_designation": "MISO/SPP",
       "fiber_technology": null,
       "dryer_used": null,
       "dryer_confidence": null,
@@ -136,7 +137,7 @@
       ]
     },
     "meta": {
-      "record_built_at": "2026-04-28 17:37:08",
+      "record_built_at": "2026-04-30 10:52:00",
       "source_table": null,
       "desc_raw": "nan",
       "primary_join_key": "epm",
@@ -165,7 +166,7 @@
       "city": "Peoria",
       "latitude": 40.6776,
       "longitude": -89.6069,
-      "rail_lines": "UP",
+      "rail_lines": "UP/NS/CN/BNSF",
       "ethanol_capacity_mgy": 61.0,
       "year_build": 1982
     },
@@ -217,6 +218,7 @@
       "special_tech": null,
       "wind_turbine": null,
       "waste_heat": null,
+      "dco_enhancement": null,
       "dryer_types": "Rotary Dryer",
       "technology": "ADM",
       "reg_pathway": null,
@@ -225,8 +227,8 @@
       "boiler_fuel": null,
       "dryer_fuel": null,
       "thermal_oxidizer_fuel": null,
-      "electricity_type": null,
-      "electrical_grid_designation": null,
+      "electricity_type": "Grid Electricity",
+      "electrical_grid_designation": "MISO/PJM",
       "fiber_technology": null,
       "dryer_used": null,
       "dryer_confidence": null,
@@ -292,7 +294,7 @@
       ]
     },
     "meta": {
-      "record_built_at": "2026-04-28 17:37:08",
+      "record_built_at": "2026-04-30 10:52:00",
       "source_table": null,
       "desc_raw": "nan",
       "primary_join_key": "epm",
@@ -430,6 +432,7 @@
       "special_tech": null,
       "wind_turbine": null,
       "waste_heat": "DEER",
+      "dco_enhancement": "Fluid Quip",
       "dryer_types": "Rotary Dryer",
       "technology": "ICM",
       "reg_pathway": "EP3",
@@ -540,7 +543,7 @@
       ]
     },
     "meta": {
-      "record_built_at": "2026-04-28 17:37:08",
+      "record_built_at": "2026-04-30 10:52:00",
       "source_table": "US_Ethanol_CI_ByFeedstock",
       "desc_raw": "",
       "primary_join_key": "epm",
@@ -644,6 +647,7 @@
       "special_tech": null,
       "wind_turbine": null,
       "waste_heat": null,
+      "dco_enhancement": null,
       "dryer_types": "Rotary Dryer",
       "technology": "ICM",
       "reg_pathway": "EP3",
@@ -733,7 +737,7 @@
       ]
     },
     "meta": {
-      "record_built_at": "2026-04-28 17:37:08",
+      "record_built_at": "2026-04-30 10:52:00",
       "source_table": "US_Ethanol_CI_ByFeedstock",
       "desc_raw": "",
       "primary_join_key": "epm",
@@ -859,6 +863,7 @@
       "special_tech": null,
       "wind_turbine": null,
       "waste_heat": null,
+      "dco_enhancement": null,
       "dryer_types": "Ring Dryer",
       "technology": "Delta-T",
       "reg_pathway": "EP3",
@@ -962,7 +967,7 @@
       ]
     },
     "meta": {
-      "record_built_at": "2026-04-28 17:37:08",
+      "record_built_at": "2026-04-30 10:52:00",
       "source_table": "US_Ethanol_CI_ByFeedstock",
       "desc_raw": "",
       "primary_join_key": "epm",
@@ -1066,6 +1071,7 @@
       "special_tech": null,
       "wind_turbine": null,
       "waste_heat": null,
+      "dco_enhancement": null,
       "dryer_types": "Ring Dryer",
       "technology": "Delta-T",
       "reg_pathway": "EP3",
@@ -1155,7 +1161,7 @@
       ]
     },
     "meta": {
-      "record_built_at": "2026-04-28 17:37:08",
+      "record_built_at": "2026-04-30 10:52:00",
       "source_table": "US_Ethanol_CI_ByFeedstock",
       "desc_raw": "",
       "primary_join_key": "epm",
@@ -1303,6 +1309,7 @@
       "special_tech": null,
       "wind_turbine": null,
       "waste_heat": null,
+      "dco_enhancement": null,
       "dryer_types": "Rotary Dryer",
       "technology": "ICM",
       "reg_pathway": "EP3",
@@ -1420,7 +1427,7 @@
       ]
     },
     "meta": {
-      "record_built_at": "2026-04-28 17:37:08",
+      "record_built_at": "2026-04-30 10:52:00",
       "source_table": "US_Ethanol_CI_ByFeedstock",
       "desc_raw": "",
       "primary_join_key": "epm",
@@ -1570,6 +1577,7 @@
       "special_tech": null,
       "wind_turbine": null,
       "waste_heat": "DEER",
+      "dco_enhancement": null,
       "dryer_types": "Steam Tube Dryer",
       "technology": "ICM",
       "reg_pathway": "EP3",
@@ -1687,7 +1695,7 @@
       ]
     },
     "meta": {
-      "record_built_at": "2026-04-28 17:37:08",
+      "record_built_at": "2026-04-30 10:52:00",
       "source_table": "US_Ethanol_CI_ByFeedstock",
       "desc_raw": "",
       "primary_join_key": "epm",
@@ -1835,6 +1843,7 @@
       "special_tech": null,
       "wind_turbine": null,
       "waste_heat": null,
+      "dco_enhancement": null,
       "dryer_types": null,
       "technology": "Vogelbusch",
       "reg_pathway": "EP3",
@@ -1952,7 +1961,7 @@
       ]
     },
     "meta": {
-      "record_built_at": "2026-04-28 17:37:08",
+      "record_built_at": "2026-04-30 10:52:00",
       "source_table": "US_Ethanol_CI_ByFeedstock",
       "desc_raw": "",
       "primary_join_key": "epm",
@@ -2147,6 +2156,7 @@
       "special_tech": null,
       "wind_turbine": null,
       "waste_heat": null,
+      "dco_enhancement": null,
       "dryer_types": "Rotary Dryer",
       "technology": "ICM",
       "reg_pathway": "EP3",
@@ -2292,7 +2302,7 @@
       ]
     },
     "meta": {
-      "record_built_at": "2026-04-28 17:37:08",
+      "record_built_at": "2026-04-30 10:52:00",
       "source_table": "US_Ethanol_CI_ByFeedstock",
       "desc_raw": "",
       "primary_join_key": "epm",
